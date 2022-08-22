@@ -17,7 +17,10 @@ import { FiAlertCircle } from 'react-icons/fi';
 
 interface InputProps extends ChakraInputProps {
   name: string;
-  error?: Merge<FieldError, FieldErrorsImpl<DeepRequired<any>>>;
+  error?: Merge<
+    FieldError,
+    FieldErrorsImpl<DeepRequired<Record<string, unknown>>>
+  >;
 }
 
 const TextInputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (

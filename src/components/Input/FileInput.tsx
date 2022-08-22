@@ -36,7 +36,10 @@ import { api } from '../../services/api';
 
 export interface FileInputProps {
   name: string;
-  error?: Merge<FieldError, FieldErrorsImpl<DeepRequired<any>>>;
+  error?: Merge<
+    FieldError,
+    FieldErrorsImpl<DeepRequired<Record<string, unknown>>>
+  >;
   setImageUrl: Dispatch<SetStateAction<string>>;
   localImageUrl: string;
   setLocalImageUrl: Dispatch<SetStateAction<string>>;
